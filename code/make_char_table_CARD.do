@@ -17,7 +17,7 @@ foreach var in `controls'{
 */
 
 foreach x of varlist `controls' {
-	replace `x' = `x' / 1000000
+	replace `x' = `x' / 10000000
 	}
 
 eststo m1: reg shric1 `controls' [aweight = round(count90)]
@@ -40,7 +40,7 @@ est store m6, title(West Europe & others)
 
 
 foreach x of varlist `controls' {
-	replace `x' = `x' * 1000000
+	replace `x' = `x' * 10000000
 	}
 
 eststo m7: reg hsiv `controls'  [aweight = round(count90)]

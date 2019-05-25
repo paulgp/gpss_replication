@@ -269,13 +269,13 @@ file write fh  "2000 & `sum_2000_alpha' & `mean_2000_alpha' \\" _n
 
 /** Panel D **/
 file write fh "\multicolumn{5}{l}{\textbf{Panel D: Top 5 Rotemberg weight industries} }\\" _n
-file write fh  " & $\hat{\alpha}_{k}$ & \$g_{k}$ & $\hat{\beta}_{k}$ & 95 \% CI & Ind Share \\ \cmidrule(lr){2-6}" _n
+file write fh  " & $\hat{\alpha}_{k}$ & \$g_{k}$ & $\hat{\beta}_{k}$ & 95 \% CI  \\ \cmidrule(lr){2-6}" _n
 foreach ind in 2 1 6 31 7 {
 	if `ci_min_`ind'' != -1 & `ci_max_`ind'' != 1 {
-		file write fh  "`ind_name_`ind'' & `alpha_`ind'' & `g_`ind'' & `beta_`ind'' & (`ci_min_`ind'',`ci_max_`ind'')  & `share_`ind'' \\ " _n
+		file write fh  "`ind_name_`ind'' & `alpha_`ind'' & `g_`ind'' & `beta_`ind'' & (`ci_min_`ind'',`ci_max_`ind'') \\ " _n
 		}
 	else  {
-		file write fh  "`ind_name_`ind'' & `alpha_`ind'' & `g_`ind'' & `beta_`ind'' & \multicolumn{1}{c}{N/A}  & `share_`ind'' \\ " _n
+		file write fh  "`ind_name_`ind'' & `alpha_`ind'' & `g_`ind'' & `beta_`ind'' & \multicolumn{1}{c}{N/A}   \\ " _n
 		}
 	}
 

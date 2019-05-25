@@ -3,7 +3,7 @@
 clear all
 discard
 set seed 12345
-use ../data/input_card, clear
+use ../../gpss_replication_w_data/data/input_card, clear
 
 local controls logsize80 logsize90 coll80 coll90 ires80 nres80 mfg80 mfg90
 local weight count90
@@ -133,19 +133,10 @@ save `tmp_name'
 restore
 merge 1:1 ind using `tmp_name'
 keep if _merge == 3
-*gen ind_name = subinstr(description, "Not Elsewhere Classified", "NEC", .)
-*replace ind_name = subinstr(ind_name, ", Except Dolls and Bicycles", "", .)
+
 
 gsort -alpha1
 
-/***
-ind	alpha1	beta2	beta1	agg_beta
-3571	.1826005	-.1130861	-.6087478	-.6193091
-3944	.1375558	-.0173997	-.0609449	-.1264918
-3651	.0853901	.0148397	.770126	.1737877
-3661	.0662476	-.0208716	-.5065653	-.3150544
-3577	.0601904	-.0182433	-.4240822	-.3030925
-***/
 
 
 
@@ -268,13 +259,13 @@ file write fh  "2000 & `sum_2000_alpha' & `mean_2000_alpha' \\" _n
 
 /** Panel D **/
 file write fh "\multicolumn{5}{l}{\textbf{Panel D: Top 5 Rotemberg weight industries} }\\" _n
-file write fh  " & $\hat{\alpha}_{k}$ & \$g_{k}$ & $\hat{\beta}_{k}$ & 95 \% CI & Ind Share \\ \cmidrule(lr){2-6}" _n
+file write fh  " & $\hat{\alpha}_{k}$ & \$g_{k}$ & $\hat{\beta}_{k}$ & 95 \% CI \\ \cmidrule(lr){2-5}" _n
 foreach ind in 1 5 2 6 31 {
 	if `ci_min_`ind'' != -10 & `ci_max_`ind'' != 10 {
-		file write fh  "`ind_name_`ind'' & `alpha_`ind'' & `g_`ind'' & `beta_`ind'' & (`ci_min_`ind'',`ci_max_`ind'')  & `share_`ind'' \\ " _n
+		file write fh  "`ind_name_`ind'' & `alpha_`ind'' & `g_`ind'' & `beta_`ind'' & (`ci_min_`ind'',`ci_max_`ind'') \\ " _n
 		}
 	else  {
-		file write fh  "`ind_name_`ind'' & `alpha_`ind'' & `g_`ind'' & `beta_`ind'' & \multicolumn{1}{c}{N/A}  & `share_`ind'' \\ " _n
+		file write fh  "`ind_name_`ind'' & `alpha_`ind'' & `g_`ind'' & `beta_`ind'' & \multicolumn{1}{c}{N/A}   \\ " _n
 		}
 	}
 
