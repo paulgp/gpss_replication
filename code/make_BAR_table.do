@@ -3,8 +3,6 @@ set rmsg on
 clear all
 set matsize 1000
 set seed 12345
-*set trace on
-*set tracedepth 2
 discard
 
 use ../data/input_BAR2, clear
@@ -245,17 +243,17 @@ bootstrap b1_bartik = r(b_bar_2sls_1) b2_bartik = r(b_bar_2sls_2) diff_bartik = 
   b1_mbtsls = r(b_sh_mbtsls_1)   b2_mbtsls = r(b_sh_mbtsls_2) diff_mbtsls = r(diff_sh_mbtsls), ///  
   cluster(czone) reps(`n'): test_and_compare  "`insts2'"
 mat pval = r(table)
-local se1_bartik = "[" + string(pval[2,1], "%12.2f") + "]"
-local se2_bartik = "[" + string(pval[2,2], "%12.2f") + "]"
+local se1_bartik = "(" + string(pval[2,1], "%12.2f") + ")"
+local se2_bartik = "(" + string(pval[2,2], "%12.2f") + ")"
 local p_bartik = "[" + string(pval[4,3], "%12.2f") + "]"
-local se1_bartik_lo = "[" + string(pval[2,3], "%12.2f") + "]"
-local se2_bartik_lo = "[" + string(pval[2,4], "%12.2f") + "]"
+local se1_bartik_lo = "(" + string(pval[2,3], "%12.2f") + ")"
+local se2_bartik_lo = "(" + string(pval[2,4], "%12.2f") + ")"
 local p_bartik_lo = "[" + string(pval[4,6], "%12.2f") + "]"
-local se1_2sls = "[" + string(pval[2,7], "%12.2f") + "]"
-local se2_2sls = "[" + string(pval[2,8], "%12.2f") + "]"
+local se1_2sls = "(" + string(pval[2,7], "%12.2f") + ")"
+local se2_2sls = "(" + string(pval[2,8], "%12.2f") + ")"
 local p_2sls = "[" + string(pval[4,9], "%12.2f") + "]"
-local se1_mbtsls = "[" + string(pval[2,10], "%12.2f") + "]"
-local se2_mbtsls = "[" + string(pval[2,11], "%12.2f") + "]"
+local se1_mbtsls = "(" + string(pval[2,10], "%12.2f") + ")"
+local se2_mbtsls = "(" + string(pval[2,11], "%12.2f") + ")"
 local p_mbtsls = "[" + string(pval[4,12], "%12.2f") + "]"
 
 

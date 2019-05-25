@@ -162,17 +162,6 @@ replace ind_name = subinstr(ind_name, ", Except Dolls and Bicycles", "", .)
 
 gsort -alpha1
 
-/***
-ind	alpha1	beta2	beta1	agg_beta
-3571	.1826005	-.1130861	-.6087478	-.6193091
-3944	.1375558	-.0173997	-.0609449	-.1264918
-3651	.0853901	.0148397	.770126	.1737877
-3661	.0662476	-.0208716	-.5065653	-.3150544
-3577	.0601904	-.0182433	-.4240822	-.3030925
-***/
-
-
-
 capture file close fh
 file open fh  using "../results/rotemberg_summary_adh.tex", write replace
 file write fh "\toprule" _n
