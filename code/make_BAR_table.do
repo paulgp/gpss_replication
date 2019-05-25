@@ -70,13 +70,13 @@ foreach control of varlist `controls' {
 local ind_stub init_sh_ind_
 local controls init_male init_race_white init_native_born init_educ_hs init_educ_coll init_veteran init_nchild
 local growth_stub nat1980_empl_ind_
-/*
+
 egen mean_growth = rowmean(nat1980_empl_ind_*)
 foreach growth of varlist `growth_stub'* {
 	qui replace `growth' = `growth' - mean_growth
 	}
 drop mean_growth
-*/
+
 foreach year in `years' {
 	foreach ind_var of varlist `ind_stub'* {
 		gen t`year'_`ind_var' = `ind_var' * (year == `year')

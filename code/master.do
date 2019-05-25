@@ -2,10 +2,10 @@
 
 set scheme paul
 
-*do make_BAR_table.do
+do make_BAR_table.do
 do make_rotemberg_summary_BAR.do
 do make_char_table_BAR.do
-/*
+
 do make_ADH_table.do
 do make_rotemberg_summary_ADH.do
 do make_char_table_ADH.do

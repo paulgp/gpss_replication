@@ -6,17 +6,6 @@ set matsize 1000
 global data_path "../data/"
 use $data_path/input_BAR2, clear
 
-
-/* foreach x of varlist nat_empl_ind_*_* { */
-/* 	if regexm("`x'", "nat_empl_ind_lo_(.*)") { */
-/* 		local ind_num = regexs(1) */
-/* 		} */
-/* 	drop nat_empl_ind_`ind_num' */
-/* 	rename nat_empl_ind_lo_`ind_num' nat_empl_ind_`ind_num' */
-/* 	} */
-
-
-
 local controls male race_white native_born educ_hs educ_coll veteran nchild
 local weight pop1980
 
@@ -54,15 +43,6 @@ foreach ind_var of varlist sh_ind_* {
 			local ind_num = regexs(1)
 			}
 		}
-	qui sum `ind_var'
-	if r(mean) == 0 {
-		drop init_`ind_var'
-		if regexm("`ind_var'", "`ind_stub'(.*)") {
-			local ind_num = regexs(1)
-			*drop nat_empl_ind_`ind_num'
-			}
-		}
-	
 	}
 
 foreach var of varlist init_sh_ind_* {
@@ -138,7 +118,7 @@ foreach var of varlist `ind_stub'* {
 	local F_`ind' = r(F)
 	qui reghdfe  `y' `temp' `controls'   [aweight=`weight'], cluster(czone) absorb(czone) 
 	local gamma_`ind' = _b[`temp']
-	qui ivreghdfe  `y' `controls' (`x'=`temp')    [aweight=`weight'], cluster(czone) absorb(czone)  
+	qui ivreghdfe  `y' `controls' (`x'=`temp') [aweight=`weight'], cluster(czone) absorb(czone)
 	local beta_`ind' = string(_b[`x'], "%9.3f") 
 	drop `temp'
 	}
