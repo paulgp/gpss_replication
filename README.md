@@ -17,7 +17,7 @@ data sources, outlined below.
 	* data generously provided by Borusyak, Hull and Jaravel (2019),
 	* and data generously provided by  Adao, Kolesar and Morales (2019).
 	
-* The Card immigration analysis (CARD) is replicated using replication code provided by David Card from Card (2009) and data from IPUMS
+* The Card immigration analysis (CARD) is replicated using replication code provided by David Card from Card (2009) and data from ICPSR
 	
 # Code process
 
