@@ -144,3 +144,9 @@ https://usa.ipums.org/usa/data.shtml
 ### Variables:
 
 `year; datanum; serial; hhwt; gq; pernum; perwt; bpl`
+
+
+# Data construction for Card (2009)
+
+TO BE FILLED IN
+
