@@ -157,7 +157,7 @@ https://usa.ipums.org/usa/data.shtml
 
 3. Run the scripts provided by Card. 
 
-       i. `np2.sas` - creates a working data set of wage-earners age 18+, with recodes, etc. This is `np80.sas7bdat`. These data are used to build wage outcomes. Takes as input `all80.sas7bdat`. *reads the code in `smsarecode80.sas` to re-code msa's.
+     i. `np2.sas` - creates a working data set of wage-earners age 18+, with recodes, etc. This is `np80.sas7bdat`. These data are used to build wage outcomes. Takes as input `all80.sas7bdat`. *reads the code in `smsarecode80.sas` to re-code msa's.
 
       ii. `allnp2.sas` -  creates a working data set of EVERYONE age 18+, with recodes, etc. This is `supp80.sas7bdat`. These data are used to build supply variables. Takes  as input `all80.sas7bdat`. *reads the code in `smsarecode80.sas` to re-code msa's.
 
