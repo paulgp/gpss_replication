@@ -151,11 +151,12 @@ https://usa.ipums.org/usa/data.shtml
 ### 1980
 1. `read80.do` - reads the state-specific files of the 1980 5% extracts (available from ICPSR), does minimal data cleaning, merges all state-specific files. The output is `all80.dta`. Takes as input:
 
-   i. Census of Population and Housing, 1980 [United States]: Public Use Microdata Sample (A Sample): 5-Percent Sample (ICPSR 8101). Download it [here](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/8101/summary).
+   i. Census of Population and Housing, 1980 [United States]: Public Use Microdata Sample (A Sample): 5-Percent Sample (ICPSR 8101). Download it here: https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/8101/summary.
 
 2. `read_all80.sas`, which creates `all80.sas7bdat`. Takes as input `all80.dta`.
 
 3. Run the scripts provided by Card. 
+
        i. `np2.sas` - creates a working data set of wage-earners age 18+, with recodes, etc. This is `np80.sas7bdat`. These data are used to build wage outcomes. Takes as input `all80.sas7bdat`. *reads the code in `smsarecode80.sas` to re-code msa's.
 
       ii. `allnp2.sas` -  creates a working data set of EVERYONE age 18+, with recodes, etc. This is `supp80.sas7bdat`. These data are used to build supply variables. Takes  as input `all80.sas7bdat`. *reads the code in `smsarecode80.sas` to re-code msa's.
@@ -171,6 +172,7 @@ https://usa.ipums.org/usa/data.shtml
       vii.`indist.sas` -  gets fraction of workers in MFG by city. Takes as input `np80.sas7bdat`.
 
 4. Export some datasets to Stata:
+
      i. `cell1_to_stata.sas` - creates datasets on wages of immigrants and natives by education class. Exports them to Stata (`1980_bigcells_new1.dta`, `1980_bigcells_new2.dta`, `nw80.dta`, `iw80.dta`, `nw801.dta`, `nw802.dta`, `nw803.dta`, `nw804.dta`, `iw801.dta`, `iw802.dta`, `iw803.dta`, `iw804.dta`). Takes as input `bigcells.sas7bdat`.
 
      ii. `t1_to_stata.sas` - creates `1980_allcells_new2.dta`. Takes as input `allcells.sas7bdat`
@@ -181,11 +183,12 @@ https://usa.ipums.org/usa/data.shtml
 ### 1990
 1. `read90.do` - reads the state-specific files of the 1990 5% extracts (available from ICPSR), does minimal data cleaning, merges all state-specific files. The output is `all90.dta`. Takes as input:
 
-   i. Census of Population and Housing, 1990 [United States]: Public Use Microdata Sample: 5-Percent Sample (ICPSR 9952). Download it [here](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/9952).
+   i. Census of Population and Housing, 1990 [United States]: Public Use Microdata Sample: 5-Percent Sample (ICPSR 9952). Download it here: https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/9952.
 
 2. `read_all90.sas`, which creates `all90.sas7bdat`. Takes as input `all90.dta`.
 
 3. Run the scripts provided by Card. 
+
      i. `np2.sas` - creates a working data set of wage-earners age 18+, with recodes, etc. This is `np90.sas7bdat`. These data are used to build wage outcomes. Takes as input `all90.sas7bdat`. *reads the code in `smsarecode90.sas` to re-code msa's.
 
      ii. `allnp2.sas `- creates a working data set of EVERYONE age 18+, with recodes, etc. This is `supp90.sas7bdat`. These data are used to build supply variables. Takes  as input `all90.sas7bdat`. *reads the code in `smsarecode90.sas` to re-code msa's.
@@ -201,6 +204,7 @@ https://usa.ipums.org/usa/data.shtml
       vii. `indist.sas` - gets fraction of workers in MFG by city. Takes as input `np90.sas7bdat`.
 
 4. Export some datasets to Stata:
+
      i. `cell1_to_stata.sas` - creates datasets on wages of immigrants and natives by education class. Exports them to Stata (`1990_bigcells_new1.dta`, `1990_bigcells_new2.dta`, `nw90.dta`, `iw90.dta`, `nw901.dta`, `nw902.dta`, `nw903.dta`, `nw904.dta`, `iw901.dta`, `iw902.dta`, `iw903.dta`, `iw904.dta`). Takes as input `bigcells.sas7bdat`.
 
      ii. `t1_to_stata.sas` - creates `1990_allcells_new2.dta`. Takes as input `allcells.sas7bdat`
@@ -210,11 +214,12 @@ https://usa.ipums.org/usa/data.shtml
 ### 2000
 1. `read2000.do` - reads the state-specific files of the 2000 5% extracts (available from ICPSR), does minimal data cleaning, merges all state-specific files. The output is `all2000.dta`. Takes as input:
 
-   i. Census of Population and Housing, 2000 [United States]: Public Use Microdata Sample: 5-Percent Sample (ICPSR 13568). Download it [here](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/13568).
+   i. Census of Population and Housing, 2000 [United States]: Public Use Microdata Sample: 5-Percent Sample (ICPSR 13568). Download it here: https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/13568.
 
 2. `read_all2000.sas`, which creates `all2000.sas7bdat`. Takes as input `all2000.dta`.
 
 3. Run the scripts provided by Card. 
+
      i. `np2.sas` - creates a working data set of wage-earners age 18+, with recodes, etc. This is `np2000.sas7bdat`. These data are used to build wage outcomes. Takes as input `all2000.sas7bdat`. 
 
      ii. `allnp2.sas `- creates a working data set of EVERYONE age 18+, with recodes, etc. This is `supp2000.sas7bdat`. These data are used to build supply variables. Takes  as input `all2000.sas7bdat`.
@@ -232,6 +237,7 @@ https://usa.ipums.org/usa/data.shtml
      viii. `inflow3.sas` - constructs the supply push instrument by "education and experience cell" and city. This is `newflows.sas7bdat'.  Takes as input `ic_city.sas7bdat` (output of `imm1.sas' in 1980) and `byicnew.sas7bdat` (output of `imm2.sas` in 2000). 
 
 4. Export some datasets to Stata:
+
      i. `cell1_to_stata` - creates datasets on wages of immigrants and natives by education class. Exports them to Stata (`2000_bigcells_new1.dta`, `2000_bigcells_new2.dta`, `nw.dta`, `iw.dta`, `nw.dta`, `nw.dta`, `nw.dta`, `nw.dta`, `iw.dta`, `iw.dta`, `iw.dta`, `iw.dta`). Takes as input `bigcells.sas7bdat`.
 
      ii. `t1_to_stata` - creates `2000_allcells_new1.dta` and `2000_allcells_new2.dta`. Takes as input `allcells.sas7bdat`. 
