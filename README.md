@@ -153,7 +153,7 @@ https://usa.ipums.org/usa/data.shtml
 
    i. Census of Population and Housing, 1980 [United States]: Public Use Microdata Sample (A Sample): 5-Percent Sample (ICPSR 8101). Download it here: https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/8101/summary.
 
-2. `read_all80.sas`, which creates `all80.sas7bdat`. Takes as input `all80.dta`.
+2. `read_all80.sas` - creates `all80.sas7bdat`. Takes as input `all80.dta`.
 
 3. Run the scripts provided by Card. 
 
@@ -169,7 +169,7 @@ https://usa.ipums.org/usa/data.shtml
 
       vi. `imm1.sas`  - gets counts of immigrants by sending country in each city  ==>`ic_city.sas7bdat` (IC is Card's classification of sending countries). Takes as input `supp80.sas7bdat.
  
-      vii.`indist.sas` -  gets fraction of workers in MFG by city. Takes as input `np80.sas7bdat`.
+      vii.`indist.sas` -  gets fraction of workers in manufacturing by city. Takes as input `np80.sas7bdat`.
 
 4. Export some datasets to Stata:
 
@@ -185,7 +185,7 @@ https://usa.ipums.org/usa/data.shtml
 
    i. Census of Population and Housing, 1990 [United States]: Public Use Microdata Sample: 5-Percent Sample (ICPSR 9952). Download it here: https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/9952.
 
-2. `read_all90.sas`, which creates `all90.sas7bdat`. Takes as input `all90.dta`.
+2. `read_all90.sas` - creates `all90.sas7bdat`. Takes as input `all90.dta`.
 
 3. Run the scripts provided by Card. 
 
@@ -193,15 +193,15 @@ https://usa.ipums.org/usa/data.shtml
 
      ii. `allnp2.sas `- creates a working data set of EVERYONE age 18+, with recodes, etc. This is `supp90.sas7bdat`. These data are used to build supply variables. Takes  as input `all90.sas7bdat`. *reads the code in `smsarecode90.sas` to re-code msa's.
  
-     iii. cell1.sas - creates a big summary of data by cell ==>   `bigcells.sas7bdat`.  Takes as input `np90.sas7bdat`.
+     iii. `cell1.sas` - creates a big summary of data by cell ==>   `bigcells.sas7bdat`.  Takes as input `np90.sas7bdat`.
 
-      iv.` t1.sas `-  creates a big summary of data by cell ==> `allcells.sas7bdat`. Takes as input `supp90.sas7bdat`.
+      iv. `t1.sas `-  creates a big summary of data by cell ==> `allcells.sas7bdat`. Takes as input `supp90.sas7bdat`.
 
       v. `supply1.sas` - gets supply measures  ==> `cellsupply.sas7bdat`. Takes as input `np90.sas7bdat`.
 
       vi. `imm1.sas`  - gets counts of immigrants by sending country in each city  ==>`ic_city.sas7bdat` (IC is Card's classification of sending countries). Takes as input `supp90.sas7bdat.
 
-      vii. `indist.sas` - gets fraction of workers in MFG by city. Takes as input `np90.sas7bdat`.
+      vii. `indist.sas` - gets fraction of workers in manufacturing by city. Takes as input `np90.sas7bdat`.
 
 4. Export some datasets to Stata:
 
@@ -216,7 +216,7 @@ https://usa.ipums.org/usa/data.shtml
 
    i. Census of Population and Housing, 2000 [United States]: Public Use Microdata Sample: 5-Percent Sample (ICPSR 13568). Download it here: https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/13568.
 
-2. `read_all2000.sas`, which creates `all2000.sas7bdat`. Takes as input `all2000.dta`.
+2. `read_all2000.sas` - creates `all2000.sas7bdat`. Takes as input `all2000.dta`.
 
 3. Run the scripts provided by Card. 
 
@@ -232,9 +232,9 @@ https://usa.ipums.org/usa/data.shtml
 
      vi. `imm3.sas`  -  gets counts of immigrants by sending country in each city  ==> `ic_citynew.sas7bdat` (IC is Card's classification of sending countries). Takes as input `supp2000.sas7bdat`.
 
-     vii. `imm2.sas` - gets a count of immigrants present in 2000 by IC  - this is used to construct the instrumental variable  ==> `byicnew.sas7bdat`. Takes as input `supp2000`.
+     vii. `imm2.sas` - gets a count of immigrants present in 2000 by IC  - this is used to construct the instrumental variable  ==> `byicnew.sas7bdat`. Takes as input `supp2000.sas7bdat`.
 
-     viii. `inflow3.sas` - constructs the supply push instrument by "education and experience cell" and city. This is `newflows.sas7bdat'.  Takes as input `ic_city.sas7bdat` (output of `imm1.sas' in 1980) and `byicnew.sas7bdat` (output of `imm2.sas` in 2000). 
+     viii. `inflow3.sas` - constructs the supply push instrument by "education and experience cell" and city. This is `newflows.sas7bdat`.  Takes as input `ic_city.sas7bdat` (output of `imm1.sas' in 1980) and `byicnew.sas7bdat` (output of `imm2.sas` in 2000). 
 
 4. Export some datasets to Stata:
 
