@@ -79,10 +79,10 @@ foreach val in z `ind_stub'3571 `ind_stub'3944 `ind_stub'3651 `ind_stub'3661 `in
 		gen t`t'_f_`val' = 100*(year == `t') * fixed_`val'
 		}
 	}
-
+local controls reg_* t*_f_l_sh_popedu_c t*_f_l_sh_popfborn t*_f_l_sh_empl_f t*_f_l_sh_routine33 t*_f_l_task_outsource t*_f_l_shind_manuf_cbp
 
 foreach val in z `ind_stub'3571 `ind_stub'3944 `ind_stub'3651 `ind_stub'3661 `ind_stub'3577  {
-	regress `y' t*_f_`val' reg_* t_2 t_3 t_4         [aweight = `weight'], cluster(czone)
+	regress `y' t*_f_`val' `controls' t_2 t_3 t_4         [aweight = `weight'], cluster(czone)
 	nlcom (100*(1+_b[t1970_f_`val'])) ///
 	 ( 100*(1+_b[t1970_f_`val'])*(1+_b[t1980_f_`val'])) ///
 	 ( 100*(1+_b[t1970_f_`val'])*(1+_b[t1980_f_`val'])*(1+_b[t1990_f_`val'])) ///
@@ -139,7 +139,7 @@ foreach val in z `ind_stub'3571 `ind_stub'3944 `ind_stub'3651 `ind_stub'3661 `in
 
 
 foreach val in z `ind_stub'3571 `ind_stub'3944 `ind_stub'3651 `ind_stub'3661 `ind_stub'3577  {
-	regress `y' t*_f_`val' reg_* t_2 t_3 t_4         [aweight = `weight'], cluster(czone)
+	regress `y' t*_f_`val' `controls' t_2 t_3 t_4         [aweight = `weight'], cluster(czone)
 	nlcom (100*(1+_b[t1970_f_`val'])) ///
 	 ( 100*(1+_b[t1970_f_`val'])*(1+_b[t1980_f_`val'])) ///
 	 ( 100*(1+_b[t1970_f_`val'])*(1+_b[t1980_f_`val'])*(1+_b[t1990_f_`val'])) ///
@@ -195,7 +195,7 @@ foreach val in z `ind_stub'3571 `ind_stub'3944 `ind_stub'3651 `ind_stub'3661 `in
 
 
 foreach val in z `ind_stub'3571 `ind_stub'3944 `ind_stub'3651 `ind_stub'3661 `ind_stub'3577  {
-	regress `y' t*_f_`val' reg_* t_2 t_3 t_4         [aweight = `weight'], cluster(czone)
+	regress `y' t*_f_`val' `controls' t_2 t_3 t_4         [aweight = `weight'], cluster(czone)
 	nlcom (100*(1+_b[t1970_f_`val'])) ///
 	 ( 100*(1+_b[t1970_f_`val'])*(1+_b[t1980_f_`val'])) ///
 	 ( 100*(1+_b[t1970_f_`val'])*(1+_b[t1980_f_`val'])*(1+_b[t1990_f_`val'])) ///
