@@ -136,7 +136,7 @@ twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) ///
 	legend(off) ylabel(, nogrid) mcolor(navy) ///
-	name("hs_mexico") graphregion(color(white)) xline(0)
+	name("hs_mexico") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_hs_mexico.pdf, replace
 restore
 
@@ -148,7 +148,7 @@ twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) ///
 	legend(off) ylabel(, nogrid) mcolor(navy) ///
-	name("hs_elsalvador") graphregion(color(white)) xline(0)
+	name("hs_elsalvador") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_hs_elsalvador.pdf, replace
 restore
 
@@ -161,7 +161,7 @@ twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) ///
 	legend(off) ylabel(, nogrid) mcolor(navy)  ///
-	name("hs_philippines") graphregion(color(white)) xline(0)
+	name("hs_philippines") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_hs_philippines.pdf, replace
 restore
 
@@ -173,7 +173,7 @@ twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) ///
 	legend(off) ylabel(, nogrid) mcolor(navy) ///
-	name("hs_china") graphregion(color(white)) xline(0)
+	name("hs_china") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_hs_china.pdf, replace
 restore
 
@@ -185,7 +185,7 @@ twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) ///
 	legend(off) ylabel(, nogrid) mcolor(navy) ///
-	name("hs_westeurope") graphregion(color(white)) xline(0)
+	name("hs_westeurope") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_hs_westeurope.pdf, replace
 restore
 
@@ -197,7 +197,7 @@ twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) ///
 	legend(off) ylabel(, nogrid) mcolor(navy) ///
-	name("hs_aggregate") graphregion(color(white)) xline(0)
+	name("hs_aggregate") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_hs_aggregate.pdf, replace
 restore
 
@@ -312,7 +312,7 @@ twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) ///
 	legend(off) ylabel(, nogrid) mcolor(navy) ///
-	name("coll_philippines") graphregion(color(white)) xline(0)
+	name("coll_philippines") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_college_philippines.pdf, replace
 restore
 
@@ -324,7 +324,7 @@ twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) ///
 	legend(off) ylabel(, nogrid) mcolor(navy) ///
-	name("coll_mexico") graphregion(color(white)) xline(0)
+	name("coll_mexico") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_college_mexico.pdf, replace
 restore
 
@@ -336,7 +336,7 @@ twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) ///
 	legend(off) ylabel(, nogrid) mcolor(navy) ///
-	name("coll_china") graphregion(color(white)) xline(0)
+	name("coll_china") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_college_china.pdf, replace
 restore
 
@@ -347,8 +347,8 @@ tsset yr
 twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) ///
-	legend(off) ylabel(, nogrid) mcolor(navy) /// 
-	name("coll_westeurope") graphregion(color(white)) xline(0)
+	legend(off) ylabel(-50000(10000)0, nogrid) mcolor(navy) /// 
+	name("coll_westeurope") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_college_westeurope.pdf, replace
 restore
 
@@ -360,7 +360,7 @@ twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) mcolor(navy) ///
 	legend(off) ylabel(, nogrid)  ///
-	name("coll_cuba") graphregion(color(white)) xline(0)
+	name("coll_cuba") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_college_cuba.pdf, replace
 restore
 
@@ -372,6 +372,6 @@ twoway rcap high low yr || scatter estimate yr, ///
 	ytitle("") ylabel(, angle(horizontal)) yline(0, lcolor(black))  ///
 	xtitle("") xlabel(1980(10)2000) ///
 	legend(off) ylabel(, nogrid) mcolor(navy) ///
-	name("coll_aggregate") graphregion(color(white)) xline(0)
+	name("coll_aggregate") graphregion(color(white)) 
 graph export $export_path/immigrant_pretrends_college_aggregate.pdf, replace
 restore
